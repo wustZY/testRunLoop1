@@ -28,10 +28,10 @@
     [self.view addSubview:self.testLabel];
     
     /// 当tablview 滚动时，label停止更新 scheduledTimer 默认运行在Default Mode
-//    self.testTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self        selector:@selector(updateTestLabel) userInfo:nil repeats:YES];
+    self.testTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self        selector:@selector(updateTestLabel) userInfo:nil repeats:YES];
     /// ---------   timer 添加至 commonModes， 当tableview滑动时 timer继续运行
-    self.testTimer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(updateTestLabel) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.testTimer forMode:NSRunLoopCommonModes];
+//    self.testTimer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(updateTestLabel) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop] addTimer:self.testTimer forMode:NSRunLoopCommonModes];
 }
 
 - (void)updateTestLabel
